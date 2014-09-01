@@ -1,2 +1,1 @@
-dotfiles
-========
+Configurations for various apps.
