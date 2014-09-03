@@ -1,0 +1,75 @@
+# Conky settings #
+background yes
+update_interval 1
+double_buffer yes
+no_buffers no
+
+# Window specifications #
+alignment top_left
+gap_x 1920
+gap_y 0
+minimum_size 600 268
+maximum_width 600
+own_window yes
+own_window_type desktop
+own_window_transparent yes
+own_window_hints undecorated,sticky,skip_taskbar,skip_pager,below
+border_inner_margin 0
+border_outer_margin 0
+
+# Graphics settings #
+draw_shades no
+default_shade_color AAAAAA
+draw_outline no
+default_outline_color AAAAAA
+draw_borders no
+draw_graph_borders yes
+default_graph_size 50 100
+show_graph_scale no
+show_graph_range no
+
+# Text settings #
+use_xft yes
+xftalpha 0
+xftfont Droid Sans:size=8
+text_buffer_size 256
+override_utf8_locale yes
+
+# Useful shortenings #
+short_units yes
+pad_percents  2
+top_name_width 30
+
+# Color scheme #
+default_color FFFFFF
+color1 FFFFFF
+color2 FFFFFF
+color3 FFFFFF
+color4 FFFFFF
+color5 DCDCDC
+color6 FFFFFF
+color7 FFFFFF
+color8 FFFFFF
+
+TEXT
+\
+# Cpu, memory and disk IO
+\
+
+${goto 22}CPU: ${cpu cpu0}%${goto 20}${goto 280}    Mem: ${memperc}%
+${goto 22}${cpugraph cpu0 40,240 FFFFFF FFFFFF -l}${goto 280}    ${memgraph 40,240 FFFFFF FFFFFF -l}
+
+
+\
+# Proceses
+\
+${goto 300}${color1}Proc${color}${color1}${color1}Mem${color} ${goto 20}${color1}Proc${color}${color1}Cpu %${color}
+
+${goto 20}${color2}${top_mem name 1}${goto 130}${color}${top cpu 1} %${goto 300}${color2}${top_mem name 1}${goto 410}${color}${top_mem mem_res 1}
+${goto 20}${color2}${top_mem name 2}${goto 130}${color}${top cpu 2} %${goto 300}${color2}${top_mem name 2}${goto 410}${color}${top_mem mem_res 2}
+${goto 20}${color2}${top_mem name 3}${goto 130}${color}${top cpu 3} %${goto 300}${color2}${top_mem name 3}${goto 410}${color}${top_mem mem_res 3}
+${goto 20}${color2}${top_mem name 4}${goto 130}${color}${top cpu 4} %${goto 300}${color2}${top_mem name 4}${goto 410}${color}${top_mem mem_res 4}
+${goto 20}${color2}${top_mem name 5}${goto 130}${color}${top cpu 5} %${goto 300}${color2}${top_mem name 5}${goto 410}${color}${top_mem mem_res 5}
+
+
+\
