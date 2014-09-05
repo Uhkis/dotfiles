@@ -1,5 +1,5 @@
 # Conky settings #
-background yes
+background no
 update_interval 1
 double_buffer yes
 no_buffers yes
@@ -7,12 +7,13 @@ no_buffers yes
 # Window specifications #
 alignment top_left
 gap_x 1920
-gap_y 0
-minimum_size 600 268
-maximum_width 600
+gap_y 10
+minimum_size 1200 268
+maximum_width 1800
 own_window yes
 own_window_type desktop
 own_window_transparent yes
+own_window_argb_visual yes
 own_window_hints undecorated,sticky,skip_taskbar,skip_pager,below
 border_inner_margin 0
 border_outer_margin 0
@@ -55,12 +56,12 @@ TEXT
 \
 # Cpu, memory and disk IO
 \
-
-${goto 20}CPU: ${cpu cpu0}%${goto 20}${goto 280}    Mem: ${memperc}%
-${goto 20}${cpugraph cpu0 40,240 FFFFFF FFFFFF -l}${goto 280}    ${memgraph 40,240 FFFFFF FFFFFF -l}
+${goto 15}${font Monospace:size=42}${time %H:%M}${goto 290}${voffset -20}${font Monospace:size=20}${time %d.%m.%Y}
+${voffset 15}${font Droid Sans:size=8}${goto 20}CPU: ${cpu cpu0}%${goto 20}${goto 280}    Mem: ${memperc}%
+${font Droid Sans:size=8}${goto 20}${cpugraph cpu0 40,240 FFFFFF FFFFFF -l}${goto 280}    ${memgraph 40,240 FFFFFF FFFFFF -l}
 
 \
-# Proceses
+# Processes
 \
 ${goto 300}${color1}Proc${color}${color1}${color1}Mem${color} ${goto 20}${color1}Proc${color}${color1}Cpu %${color}
 
