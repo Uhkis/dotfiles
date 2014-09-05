@@ -57,9 +57,11 @@ TEXT
 # Cpu, memory and disk IO
 \
 ${goto 15}${font Monospace:size=42}${time %H:%M}${goto 290}${voffset -20}${font Monospace:size=20}${time %d.%m.%Y}
-${voffset 15}${font Droid Sans:size=8}${goto 20}CPU: ${cpu cpu0}%${goto 20}${goto 280}    Mem: ${memperc}%
-${font Droid Sans:size=8}${goto 20}${cpugraph cpu0 40,240 FFFFFF FFFFFF -l}${goto 280}    ${memgraph 40,240 FFFFFF FFFFFF -l}
-
+${voffset 15}${font Droid Sans:size=8}
+${goto 20}CPU: ${cpu cpu0}%${goto 20}${goto 280}    
+${goto 20}${cpubar 20 400}
+${goto 20} Mem: ${memperc}%
+${goto 20}${membar 20 400}
 \
 # Processes
 \
