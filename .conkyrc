@@ -8,7 +8,7 @@ no_buffers yes
 alignment top_left
 gap_x 1920
 gap_y 10
-minimum_size 1200 268
+minimum_size 1200 568
 maximum_width 1800
 own_window yes
 own_window_type desktop
@@ -59,9 +59,9 @@ TEXT
 ${goto 15}${font Monospace:size=42}${time %H:%M}${goto 290}${voffset -20}${font Monospace:size=20}${time %d.%m.%Y}
 ${voffset 15}${font Droid Sans:size=8}
 ${goto 20}CPU: ${cpu cpu0}%${goto 20}${goto 280}    
-${goto 20}${cpubar 20 400}
+${goto 20}${cpubar 30,420}
 ${goto 20} Mem: ${memperc}%
-${goto 20}${membar 20 400}
+${goto 20}${membar 30,420}
 \
 # Processes
 \
@@ -73,7 +73,6 @@ ${goto 20}${color2}${top_mem name 3}${goto 130}${color}${top cpu 3} %${goto 300}
 ${goto 20}${color2}${top_mem name 4}${goto 130}${color}${top cpu 4} %${goto 300}${color2}${top_mem name 4}${goto 410}${color}${top_mem mem_res 4}
 ${goto 20}${color2}${top_mem name 5}${goto 130}${color}${top cpu 5} %${goto 300}${color2}${top_mem name 5}${goto 410}${color}${top_mem mem_res 5}
 
-${goto 20}Core 1: ${goto 140}${hwmon temp 2}°C
-${goto 20}Core 2: ${goto 140}${hwmon temp 4}°C
+${goto 20}CPU: ${goto 140}${hwmon temp 2}°C
 ${goto 20}GPU: ${goto 140}${nvidia temp}°C
 \
